@@ -1,3 +1,18 @@
-<h1>Hello everyone!</h1>
+<h1>Dynamic Form</h1>
 
+<div id='dynamic-form'>
+  <input type='radio' id='ad_type_car' value='car' v-model='currentForm' />
+  <label for='ad_type_car'>Car</label>
+  <br />
+  <input type='radio' id='ad_type_truck' value='truck' v-model='currentForm' />
+  <label for='ad_type_truck'>Truck</label>
+  <br />
+  <input type='radio' id='ad_type_motorcycle' value='motorcycle' v-model='currentForm' />
+  <label for='ad_type_motorcycle'>Motorcycle</label>
+  <br />
+  <input type='radio' id='ad_type_boat' value='boat' v-model='currentForm' />
+  <label for='ad_type_boat'>Boat</label>
+  <br />
+
+  <component :is='currentForm'></component>
 </div>
